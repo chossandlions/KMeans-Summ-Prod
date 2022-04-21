@@ -46,3 +46,5 @@ If launched properly, you should see a bare-minimum static html page as so:
 <img width="521" alt="Screen Shot 2022-04-21 at 4 26 23 PM" src="https://user-images.githubusercontent.com/103800402/164567044-b9dec2d6-3f90-418c-9ba0-ac09455f2220.png">
 
 To use, simply upload a .txt file of suitable length and click submit. If you wish to extract keywords from the document as well, click the checkbox.
+
+For a demo, you can use http://34.82.72.81:8080/.
