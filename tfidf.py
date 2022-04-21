@@ -44,6 +44,6 @@ class TF_IDF():
         print("\nKeywords:")
         for k in keywords:
             print(k, keywords[k])
-
+        return keywords
 
 

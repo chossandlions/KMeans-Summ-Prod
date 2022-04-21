@@ -27,6 +27,9 @@ def is_valid(parser, arg):
     else:
         return open(arg, 'r')
 
+app = flask.Flask(__name__)
+app.config["DEBUG"] = True
+
 #Load the parser arguments from console
 parser = argparse.ArgumentParser()
 parser.add_argument('--file', dest="filepath", required=True, help="Insert filepath to .txt file", type=lambda x: is_valid(parser, x))

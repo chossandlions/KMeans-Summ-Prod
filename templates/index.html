@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <form action = "http://localhost:5000/uploader" method = "POST" 
+        enctype = "multipart/form-data">
+        <input type = "file" name = "file" />
+        <input type = "checkbox" name = "tfidf" />
+        <label for="checkbox_id">Keyword Extraction?</label>
+        <input type = "submit"/>
+        </form>
+
+        {% if processed_text %}
+        <p id="text">{{ processed_text }}</p>
+        {% endif %}
+
+        {% if keywords %}
+        <p id="key">{{ keywords }}</p>
+        {% endif %}
+    </body>
+</html>
