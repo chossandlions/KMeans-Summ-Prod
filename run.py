@@ -10,7 +10,6 @@ from nltk import tokenize
 from nltk.corpus import stopwords
 from nltk.tokenize import sent_tokenize
 from sklearn.metrics.pairwise import cosine_similarity
-from tqdm import tqdm
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.cluster import KMeans
@@ -58,11 +57,9 @@ elif len(text) == 0:
     print("File is empty.")
 
 if args.tfidf:
-    #print("Summary keywords: ")
     corp = pd.read_csv("data/cleaned_data.csv")["Text"][:10000]
     corp = corp.apply(clean_text).to_list()
     tf = TF_IDF(corp)
-    res_keyword = tf.extract_keywords(result, 10)
-    #print("\n")
-    #print(res_keyword)
+    res_keyword = tf.extract_keywords(text, 10)
+
 
