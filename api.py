@@ -59,8 +59,6 @@ def upload_file():
             with open('temp.txt', 'r') as f:
                 text = f.read()
 
-            print(tfidf)
-
             if len(text) >= 1000:
                 try:
                     if tfidf:
